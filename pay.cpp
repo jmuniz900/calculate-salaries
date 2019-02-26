@@ -12,7 +12,7 @@ void writeData(Person (&employees)[20], int nEmployee){
    file.open("output.txt");
    if(file.is_open()){
      for(int i = 0; i < nEmployee; i++){
-       file << employees[i].fullName() << employees[i].totalPay();
+       file << employees[i].fullName() << " " << employees[i].totalPay();
        file << endl;
      }
    }
@@ -46,7 +46,7 @@ void readData(Person (&employees)[20], int nEmployee){
 
 int main(){
   Person employee[20];
-  int maxEmployees = 20;
+  int maxEmployees = 6;
 
   readData(employee, maxEmployees);
   writeData(employee, maxEmployees);
